@@ -209,8 +209,9 @@ function createButtonElements(
     buttonElm.onclick = () => {
       function runOnClick(): AlertAnswer {
         if (b.useInputForm) {
-          if (textarea?.textContent) {
-            return b.onClick({ InputValue: textarea?.textContent });
+          console.log(`textContent: ${textarea?.value}`);
+          if (textarea?.value) {
+            return b.onClick({ InputValue: textarea?.value });
           } else {
             return b.onClick({ InputValue: "" });
           }
