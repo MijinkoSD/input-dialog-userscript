@@ -91,13 +91,13 @@ export async function scrapboxAlert(
   buttonArea.append(
     ...buttons,
   );
-  const priorityEnterButtonIndex =
-    (mode.priorityEnterButtonIndex ? mode.priorityEnterButtonIndex : 0);
+  const priorityEnterButtonIndex = mode.priorityEnterButtonIndex
+    ? mode.priorityEnterButtonIndex
+    : 0;
   const enterButton = buttons[priorityEnterButtonIndex];
-  const cancelButton =
-    (mode.priorityCancelButtonIndex
-      ? buttons[mode.priorityCancelButtonIndex]
-      : undefined);
+  const cancelButton = mode.priorityCancelButtonIndex
+    ? buttons[mode.priorityCancelButtonIndex]
+    : undefined;
   input.addEventListener("keydown", (e) => {
     if (
       e.key === "Enter" && e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey
