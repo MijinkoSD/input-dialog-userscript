@@ -58,6 +58,11 @@ export const buildInAlertModes: { [K in string]: AlertMode } = {
     buttons: [buildInButtons.ENTER],
     priorityEnterButtonIndex: 0,
   },
+  ENTER_CANCEL: {
+    buttons: [buildInButtons.ENTER, buildInButtons.CANCEL],
+    priorityEnterButtonIndex: 0,
+    priorityCancelButtonIndex: 1,
+  },
 };
 
 /**
